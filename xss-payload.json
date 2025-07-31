@@ -3,7 +3,7 @@
   "info": {
     "version": "1.0.0",
     "title": "XSS Test",
-    "description": "<img src=x onerror=alert('INFO')>"
+    "description": "+ADw-script+AD4-alert(1)+ADw-/script+AD4-"
   },
   "host": "example.com",
   "basePath": "/api",
@@ -16,7 +16,7 @@
         "description": "<script>alert('DESC')</script>",
         "responses": {
           "200": {
-            "description": "<img src=1 onerror=alert('200 OK DESC')>"
+            "description": ""><svg/onload=setTimeout`${'ale'+'rt'}(1)`>"
           }
         }
       }
