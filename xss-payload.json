@@ -3,7 +3,7 @@
   "info": {
     "version": "1.0.0",
     "title": "XSS Test",
-    "description": "+ADw-script+AD4-alert(1)+ADw-/script+AD4-"
+    "description": "%22%3E%3Csvg/onload=setTimeout%60%24%7B'ale'+'rt'%7D(1)%60%3E"
   },
   "host": "example.com",
   "basePath": "/api",
