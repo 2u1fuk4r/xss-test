@@ -2,8 +2,24 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "Injected",
-    "description": "<img src=x onerror=alert(document.domain)>"
+    "title": "XSS Test",
+    "description": "<img src=x onerror=alert('INFO')>"
   },
-  "paths": {}
+  "host": "example.com",
+  "basePath": "/api",
+  "schemes": ["http"],
+  "paths": {
+    "/vuln": {
+      "get": {
+        "tags": ["test"],
+        "summary": "<svg onload=alert('SUMMARY')>",
+        "description": "<script>alert('DESC')</script>",
+        "responses": {
+          "200": {
+            "description": "<img src=1 onerror=alert('200 OK DESC')>"
+          }
+        }
+      }
+    }
+  }
 }
