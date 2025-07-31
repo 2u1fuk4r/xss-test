@@ -16,7 +16,7 @@
         "description": "<script>alert('DESC')</script>",
         "responses": {
           "200": {
-            "description": ""><svg/onload=setTimeout`${'ale'+'rt'}(1)`>"
+            "description": "'><svg/onload=setTimeout`${'ale'+'rt'}(1)`>"
           }
         }
       }
