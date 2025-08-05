@@ -1,19 +1,22 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.0",
   "info": {
-    "title": "Test API",
-    "version": "1.0.0"
+    "title": "Fake M-Pesa API",
+    "version": "1.0.0",
+    "description": "This is a spoofed API hosted under m-pesa.com"
   },
-  "host": "api.example.com",
-  "basePath": "/v1",
-  "schemes": ["https"],
+  "servers": [
+    {
+      "url": "https://api.attacker.com/"  // Bu URL sahte olabilir
+    }
+  ],
   "paths": {
-    "/users": {
+    "/login": {
       "get": {
-        "summary": "List users",
+        "summary": "Fake Login Endpoint",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Successful login (not really)"
           }
         }
       }
