@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://api.attacker.com/"  // Bu URL sahte olabilir
+      "url": "https://api.attacker.com/" 
     }
   ],
   "paths": {
